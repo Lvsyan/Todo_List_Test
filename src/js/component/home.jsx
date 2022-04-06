@@ -1,26 +1,18 @@
 import React from "react";
+import ListaTarea from "./listaTarea.jsx";
+import Tarea from "./tarea.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
-const Home = () => {
-	return (
-		<div>
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
+class Home extends React.PureComponent {
+	componentDidMount;
+	render = () => {
+		return (
+			<div className="d-flex justify-content-center m-5">
+				<h1>TODO LIST</h1>
+				<Tarea />
+				<ListaTarea />
+			</div>
+		);
+	};
+}
 
 export default Home;
